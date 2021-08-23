@@ -23,10 +23,13 @@ export default function IngresoProducto ({producto,capturar,agregar}) {
       textAlign:"center",
       marginRight:'3%',
       flex:1,
-      borderBottomWidth:1
+      borderWidth:1,
+      
     },
     enviar:{
         flex:1,
+        paddingRight:5,
+        fontSize: 20
     }
    
   });

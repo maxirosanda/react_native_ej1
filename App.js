@@ -6,7 +6,7 @@ import List from './components/list.js'
 import ModalEliminar from './components/modal.js'
 
 export default function App() {
-  
+
   const [producto, setProducto] = useState("");
   const [productos, setProductos] = useState([]);
   const [visible, setVisible] = useState(false);
@@ -15,8 +15,10 @@ export default function App() {
     setProducto(t)
   }
   const agregar = () =>{
+    if(producto!==""){
     setProductos([...productos,{_id:Math.random().toString(),producto:producto}])
     setProducto("")
+  }
 
   }
 
@@ -43,7 +45,6 @@ export default function App() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     marginTop:50,

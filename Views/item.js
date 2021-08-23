@@ -4,12 +4,11 @@ import { StyleSheet, Text, View,Button} from 'react-native';
 
 export default function Item({item,abrirModal}) {
 
-  console.log(item)
   return (
    
-        <View >
+        <View style={styles.item} >
         <Text style={styles.text} >{item.producto}</Text>
-        <View style={styles.contenedorbutton}><Button onPress={()=> abrirModal(item._id)} title="x"></Button></View>
+        <View style={styles.contenedorbutton}><Button onPress={()=> abrirModal(item._id)} title="Eliminar Producto"></Button></View>
         </View>
 
 
@@ -18,16 +17,21 @@ export default function Item({item,abrirModal}) {
 }
 
 const styles = StyleSheet.create({
-
+  item:{
+    width:"100%",
+    marginTop:30,
+    marginLeft:30,
+    flexDirection:'row',
+    alignItems: "center"
+  },
   text:{
-    margin:20,
-    padding:5,
-    width:"35%",
+    flex:1,
     textAlign:"center",
-    borderWidth:2
+    fontSize: 25
+
   },
   contenedorbutton:{
-    flexDirection:"row",
+    flex:2,
     alignItems:"center",
     marginRight:3
   },
